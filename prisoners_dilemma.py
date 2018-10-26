@@ -70,8 +70,7 @@ import zavodny
 betray = example1
 collude = example0
 
-modules = [example0, example1, example2, example3, example4, example5, example6, example7,
-           adamos, bennett, butrovich, cano, carpizo, carter, cheary, diep, espinoza,
+modules = [adamos, bennett, butrovich, cano, carpizo, carter, cheary, diep, espinoza,
            grupe, herron, ho, issa, kauffman, kelchner, mcknight, ordone, patch,
            patience, pelak, penington, robinson, robledo, rosenfield, sherman,
            stearns, stromberg, taylor, whitacre, williams, zavodny]
