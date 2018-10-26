@@ -35,11 +35,45 @@ import os.path
     
 import example0, example1, example2, example3
 import example4, example5, example6, example7
+import adamos
+import bennett
+import butrovich
+import cano
+import carpizo
+import carter
+import cheary
+import diep
+import espinoza
+import grupe
+import herron
+import ho
+import issa
+import kauffman
+import kelchner
+import mcknight
+import ordone
+import patch
+import patience
+import pelak
+import penington
+import robinson
+import robledo
+import rosenfield
+import sherman
+import stearns
+import stromberg
+import taylor
+import whitacre
+import williams
+import zavodny
 
 betray = example1
 collude = example0
 
-modules = [example0, example1, example2, example3, example4, example5, example6, example7]
+modules = [adamos, bennett, butrovich, cano, carpizo, carter, cheary, diep, espinoza,
+           grupe, herron, ho, issa, kauffman, kelchner, mcknight, ordone, patch,
+           patience, pelak, penington, robinson, robledo, rosenfield, sherman,
+           stearns, stromberg, taylor, whitacre, williams, zavodny]
 for module in modules:
     reload(module)
     print ('reloaded',module)
@@ -374,5 +408,5 @@ def post_to_file(string, filename='tournament.txt', directory=''):
  
 ### Call main_play() if this file is executed
 if __name__ == '__main__':
-    scores, moves, reports = main_play(modules[0:4])   
+    scores, moves, reports = main_play(modules)   
     section0, section1, section2, section3 = reports
