@@ -7,8 +7,8 @@
 ####
 
 team_name = 'Ryan'
-strategy_name = 'Betray unless even'
-strategy_description = 'Betray unless my scroe and their score is even.'
+strategy_name = 'Collude unless odd'
+strategy_description = 'Collude unless my score and their score are both odd.'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -25,13 +25,13 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
-   
+    
     if len(my_history)==0:
-        return 'b'
-    elif int(their_score)%2==0 and int(my_score)%2==0:
         return 'c'
-    else:
+    elif int(their_score)%2==1 and int(my_score)%2==1:
         return 'b'
+    else:
+        return 'c'
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
