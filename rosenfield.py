@@ -7,7 +7,7 @@
 ####
 
 team_name = 'Rosenfield' # Only 10 chars displayed.
-strategy_name = 'MashUp'
+strategy_name = 'TfTSpitefulCheese'
 strategy_description = 'It\'s a secret'
 
 def move(my_history, their_history, my_score, their_score):
