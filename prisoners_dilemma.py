@@ -66,6 +66,10 @@ import taylor
 import whitacre
 import williams
 import zavodny
+import rosenfield1
+import rosenfield2
+import rosenfield3
+import rosenfield4
 
 betray = example1
 collude = example0
@@ -73,7 +77,9 @@ collude = example0
 modules = [adamos, bennett, butrovich, cano, carpizo, carter, cheary, diep, espinoza,
            grupe, herron, ho, issa, kauffman, kelchner, mcknight, ordone, patch,
            patience, pelak, penington, robinson, robledo, rosenfield, sherman,
-           stearns, stromberg, taylor, whitacre, williams, zavodny]
+           stearns, stromberg, taylor, whitacre, williams, zavodny, rosenfield1, rosenfield2,
+           rosenfield3, rosenfield4]
+
 for module in modules:
     reload(module)
     print ('reloaded',module)
