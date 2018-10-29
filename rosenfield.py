@@ -6,10 +6,10 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
-    
+team_name = 'Rosenfield' # Only 10 chars displayed.
+strategy_name = 'TfTSpitefulCheese'
+strategy_description = 'It\'s a secret'
+
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
@@ -25,10 +25,50 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
-    
-    return 'c'
 
+    always_betray = 0
+    cheese_check = 0
     
+    
+    
+    if len(their_history) == 10:
+        if their_history[0] == 'b' or 'B':
+            if their_history[1] == 'b' or 'B':
+                if their_history[2] == 'b' or 'B':
+                    if their_history[3] == 'c' or 'C':
+                        if their_history[4] == 'b' or 'B':
+                            if their_history[5] == 'b' or 'B':
+                                if their_history[6] == 'c' or 'C':
+                                    if their_history[7] == 'b' or 'B':
+                                        if their_history[8] == 'c' or 'C':
+                                            if their_history[9] == 'c' or 'C':
+                                                cheese_check = 1
+        else:
+            cheese_check = 0
+    
+    
+    
+    if len(their_history) > 2:
+        if(always_betray == 0):
+            if(their_history[len(their_history)-1] == 'b' or 'B'):
+                if(their_history[len(their_history)-2] == 'b' or 'B'):
+                    always_betray = 1
+    else:
+        always_betray = 0
+
+
+
+    if cheese_check == 1:
+        return 'b'
+    else:
+        if len(their_history) == 0:
+            return 'c'
+        else:
+            if(always_betray == 1):
+                return 'b'
+            else:
+                return their_history[-1]
+
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
@@ -65,4 +105,27 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')             
+              result='b')
+
+
+'''WORKING CODE
+
+always_betray = 0
+    
+    if len(their_history) < 2:
+        always_betray = 0
+    else:
+        if(their_history[-1] == 'b' and their_history[-2] == 'b' and always_betray != 1):
+            always_betray = 1
+
+
+
+    if len(their_history) == 0:
+        return 'c'
+    else:
+        if(always_betray == 1):
+            return 'b'
+        else:
+            return their_history[-1]
+
+'''
